@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header{
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+h2{
+  font-family: "Poppins", sans-serif;
+}
+h3{
+  font-family: "Poppins", sans-serif;
+}
