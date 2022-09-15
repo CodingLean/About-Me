@@ -13,6 +13,7 @@ let questionOneGuess = prompt('Have I Ever swam with Naked Dolphins?').toUpperCa
 console.log(questionOneGuess);
 if(questionOneGuess === 'Y' || questionOneGuess === 'YES'){
   alert('Ok ok ok, you got lucky, homie!');
+  userPoints++;
 } else if(questionOneGuess === 'N' || questionOneGuess === 'NO'){
   alert('Guess again, Bucko.');
 }
@@ -79,13 +80,35 @@ while(attempts > 0 ){
     alert('My favorite number is 17.');
   }
 }
-alert('you have ' + userPoints + ' points.');
 
-alert(`Thanks for playing ${visitorName}`);
+const shoes = ['nike cortez', ' jordan retro 1', ' jordan retro 5', ' jordan retro 11', 'adidas yeezy', 'rebook ai questions', 'jordan retro 4'];
 
-let attemps = 6;
-while(attempts > 0 ){
-  let questionSevenguess = prompt()
+
+
+let numTrys = 0;
+let correct = false;
+
+while (numTrys < 6 && correct === false) {
+  let questionSevenguess = prompt('Name a brand of shoes in my top 10').toLowerCase();
+  for (let i = 0; i < shoes.length; i++) {
+    if (shoes[i] === questionSevenguess) {
+      alert(`Dont think you know me because you are right! Heres my whole list: ${shoes}.`);
+      correct = true;
+      userPoints++;
+      break;
+    }
+  }
+  numTrys++;
+  if (correct === false) {
+    alert('Negative Ghostrider, that was not one of them');
+  }
+}
+if (correct === false) {
+  alert(`Geez get it together, heres my list ${shoes}.`);
 }
 
+
+
+{
+  alert(`Thanks for taking my quiz, ${visitorName}. Your score was ${userPoints} out of 7`);}
 
